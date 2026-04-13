@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Package Sorter — Smarter Technology</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Package Sorter</h1>
+    <p class="subtitle">Robotic dispatch system — enter package dimensions and mass</p>
+
+    <div class="card inputs-card">
+      <div class="input-grid">
+        <div class="field">
+          <label for="width">Width (cm)</label>
+          <input type="number" id="width" value="10" min="0" step="1" />
+        </div>
+        <div class="field">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" value="10" min="0" step="1" />
+        </div>
+        <div class="field">
+          <label for="length">Length (cm)</label>
+          <input type="number" id="length" value="10" min="0" step="1" />
+        </div>
+        <div class="field">
+          <label for="mass">Mass (kg)</label>
+          <input type="number" id="mass" value="1" min="0" step="1" />
+        </div>
+      </div>
+      <button id="sort-btn">Sort Package</button>
+    </div>
+
+    <div class="card result-card" id="result-card">
+      <div class="result-label">Stack</div>
+      <div class="result-badge" id="result-badge">—</div>
+      <div class="result-reason" id="result-reason"></div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Volume</span>
+          <span class="stat-value" id="stat-vol">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Bulky</span>
+          <span class="stat-value" id="stat-bulky">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Heavy</span>
+          <span class="stat-value" id="stat-heavy">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card test-card">
+      <h2>Test Suite</h2>
+      <button id="run-tests-btn">Run All Tests</button>
+      <div id="test-results"></div>
+    </div>
+  </div>
+
+  <script src="sort.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
